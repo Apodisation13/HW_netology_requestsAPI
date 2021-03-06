@@ -2,7 +2,7 @@ import requests
 
 token = 2619421814940190
 
-# hulk = 332
+# hulk = 332  # это я вначале нашёл их там просто в списке
 # captain_america = 149
 # thanos = 655
 
