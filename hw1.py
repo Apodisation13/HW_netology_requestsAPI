@@ -10,14 +10,13 @@ superheroes = ["Hulk", "Captain America", "Thanos"]
 intelligence = []
 
 for each in superheroes:
-    url_id = f'https://superheroapi.com/api/{token}/search/{each}'
-    responce_id = requests.get(url_id)
-    each_id = responce_id.json()['results'][0]['id']
-    url_intel = f'https://superheroapi.com/api/{token}/{each_id}/powerstats'
-    responce_intel = requests.get(url_intel)
-    print(responce_intel.json())
-    each_intel = int(responce_intel.json()['intelligence'])
-    print(each_intel)
+    url = f'https://superheroapi.com/api/{token}/search/{each}'
+    response = requests.get(url)
+    # each_id = response.json()['results'][0]['id']
+    # print(each_id)
+    each_intel = int(response.json()['results'][0]['powerstats']['intelligence'])
+    # print(each_intel)
     intelligence.append(each_intel)
 
-print(intelligence)
+print(max(intelligence))
+# Танос - id655, intelligence100
