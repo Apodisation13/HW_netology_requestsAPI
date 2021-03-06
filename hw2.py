@@ -21,8 +21,7 @@ class YaUploader:
             if r.status_code == 201:
                 return print("Успешная загрузка")
             return print(f"Упс, похоже что-то пошло не так. Ошибка {r.status_code}")
-        else:
-            return print(f'Ошибка получения ссылки для загрузки файла {response.status_code}')
+        return print(f'Ошибка получения ссылки для загрузки файла {response.status_code}')
 
 
 if __name__ == '__main__':
